@@ -44,11 +44,9 @@ class PokemonEntity(models.Model):
                                 related_name='entities'
                                  )
     appeared_at = models.DateTimeField(
-                                       default=timezone.now,
                                        verbose_name="Время появления"
                                       )
     disappeared_at = models.DateTimeField(
-                                          default=timezone.now,
                                           verbose_name="Время исчезновения"
                                           )
     level = models.IntegerField(blank=True, verbose_name="Уровень")
