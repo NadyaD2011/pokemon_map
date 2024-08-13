@@ -30,3 +30,14 @@ class PokemonEntity(models.Model):
                                           default=timezone.now,
                                           verbose_name="Время исчезновения"
                                           )
+    level = models.IntegerField(blank=True, verbose_name="Уровень")
+    health = models.IntegerField(null=True,
+                                 blank=True,
+                                 verbose_name="Здоровье"
+                                 )
+    strength = models.IntegerField(null=True, blank=True, verbose_name="Сила")
+    defence = models.IntegerField(null=True, blank=True, verbose_name="Защита")
+    stamina = models.IntegerField(null=True,
+                                  blank=True,
+                                  verbose_name="Выносливость"
+                                  )
