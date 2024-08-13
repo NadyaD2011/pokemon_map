@@ -7,13 +7,18 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_entities', '0001_initial'),
+        ("pokemon_entities", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='pokemonentity',
-            name='pokemon',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pokemons', to='pokemon_entities.pokemon', verbose_name='Покемон'),
+            model_name="pokemonentity",
+            name="pokemon",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="pokemons",
+                to="pokemon_entities.pokemon",
+                verbose_name="Покемон",
+            ),
         ),
     ]
